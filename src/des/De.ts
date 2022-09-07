@@ -1,4 +1,5 @@
-class De {
+import { Lanceable } from "./../interface/Lanceable";
+class De implements Lanceable {
   nombreFace: number;
   protected _valeur: number = 0;
 
@@ -7,7 +8,7 @@ class De {
     this.lancer();
   }
 
-  lancer() {
+  lancer() : void {
     this._valeur = Math.ceil(Math.random() * this.nombreFace);
   }
 
@@ -16,8 +17,8 @@ class De {
   }
 
   protected set valeur(newVal: number) {
-    // Car seul lancer appelle le setter 
-    // -> YAGNI : You Ain't Gonna Need It ! 
+    // Car seul lancer appelle le setter
+    // -> YAGNI : You Ain't Gonna Need It !
     if (newVal < 1 || newVal > 6) {
       throw new Error("Le dé doit avoir une valeur entre 1 et 6 inclus");
     } else {
