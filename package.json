@@ -2,11 +2,11 @@
   "name": "dice-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "/dist/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && node",
-    "build": "tsc"
+    "start": "npm run build && node .",
+    "build": "npx tsc"
   },
   "author": "Wavelopper",
   "license": "ISC",
